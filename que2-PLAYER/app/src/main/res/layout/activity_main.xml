@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:weightSum="100">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="75"
+        android:padding="20dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:cardCornerRadius="12dp"
+            app:cardBackgroundColor="#000000"
+            app:cardElevation="10dp">
+
+            <VideoView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_gravity="center" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="System Ready"
+            android:textColor="#BBBBBB"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="25"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:elevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <Button android:id="@+id/btnOpenFile" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Open File" android:layout_margin="2dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+            <Button android:id="@+id/btnOpenURL" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Open URL" android:layout_margin="2dp" style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="4">
+            <Button android:id="@+id/btnPlay" android:layout_width="0dp" android:layout_columnWeight="1" android:text="PLAY" android:backgroundTint="#4CAF50" android:layout_margin="2dp"/>
+            <Button android:id="@+id/btnPause" android:layout_width="0dp" android:layout_columnWeight="1" android:text="PAUSE" android:backgroundTint="#FF9800" android:layout_margin="2dp"/>
+            <Button android:id="@+id/btnStop" android:layout_width="0dp" android:layout_columnWeight="1" android:text="STOP" android:backgroundTint="#F44336" android:layout_margin="2dp"/>
+            <Button android:id="@+id/btnRestart" android:layout_width="0dp" android:layout_columnWeight="1" android:text="RETRY" android:backgroundTint="#2196F3" android:layout_margin="2dp"/>
+        </GridLayout>
+    </LinearLayout>
+
+</LinearLayout>
