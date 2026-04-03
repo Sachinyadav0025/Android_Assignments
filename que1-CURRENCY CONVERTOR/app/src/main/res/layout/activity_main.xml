@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?android:attr/windowBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Currency Converter"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"/>
+        <ImageView
+            android:id="@+id/btnSettings"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@android:drawable/ic_menu_manage"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="?attr/colorPrimary"
+            android:contentDescription="Settings" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout android:padding="16dp" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/etFrom" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="0.00" android:inputType="numberDecimal" android:background="@null" android:textSize="24sp" />
+                <Spinner android:id="@+id/spinnerFrom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:entries="@array/currency_array"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageButton
+            android:id="@+id/btnSwap"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="?attr/colorPrimary"
+            android:contentDescription="Swap" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp">
+            <LinearLayout android:padding="16dp" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/etTo" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:hint="0.00" android:inputType="numberDecimal" android:background="@null" android:textSize="24sp" android:focusable="false" />
+                <Spinner android:id="@+id/spinnerTo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:entries="@array/currency_array"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/btnConvert"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="20dp"
+            android:text="Convert"
+            app:cornerRadius="8dp"/>
+    </LinearLayout>
+</LinearLayout>

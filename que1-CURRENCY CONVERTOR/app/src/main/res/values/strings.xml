@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Currency Converter</string>
+    <string name="amount_label">Amount:</string>
+    <string name="from_label">From:</string>
+    <string name="to_label">To:</string>
+    <string name="convert_button">Convert</string>
+    <string name="dark_mode_toggle">Dark Mode</string>
+</resources>
